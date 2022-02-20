@@ -6,6 +6,30 @@
         <%- include('../includes/navigation.ejs') %>
 
             <main>
+                <!--
+                <label for="cars">Shob by category:</label>
+                    
+                <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                </select>-->
+
+                <h1>Shop by Price</h1>
+                <form action="/products" method="POST">
+                    <div class="form-control">
+                        <label for="maxPrice">Max Price</label>
+                        <input 
+                            class=""
+                            type="number" 
+                            name="maxPrice" 
+                            id="maxPrice">
+                    </div>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn" type="submit">Show Products</button>
+                </form>
+
                 <% if (prods.length > 0) { %>
                     <div class="grid">
                         <% for (let product of prods) { %>

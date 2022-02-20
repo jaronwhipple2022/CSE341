@@ -143,3 +143,22 @@ exports.getOrders = (req, res, next) => {
       return next(error);
     });
 };
+
+exports.getMaxPrice = (req, res, next) => {
+  const maxPrice = req.body.maxPrice;
+  const prodId = req.params.productId;
+  Product.findById(prodId)
+    .then(product => {
+      res.render('shop/products', {
+        product: product,
+        pageTitle: "products under",
+        path: '/products',
+        maxPrice: maxPrice
+      });
+    })
+    .catch(err => {
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
+};
