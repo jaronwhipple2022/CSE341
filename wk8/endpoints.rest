@@ -1,0 +1,14 @@
+# get /posts?title={title}&content={content}
+# or
+# get /posts?{title}{content}
+#GET http://localhost:8080/professional
+
+###
+
+# post /post
+#POST http://localhost:8080/professional
+
+fetch('http://localhost:8080/professional')
+    .then(res => res.json())
+    .then(json => {
+})

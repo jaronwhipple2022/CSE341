@@ -151,7 +151,7 @@ exports.getMaxPrice = (req, res, next) => {
     .then(product => {
       res.render('shop/products', {
         product: product,
-        pageTitle: "products under",
+        pageTitle: "Products under",
         path: '/products',
         maxPrice: maxPrice
       });

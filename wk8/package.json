@@ -1,0 +1,27 @@
+{
+  "name": "wk8",
+  "version": "1.0.0",
+  "description": "prove assignment week 8",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "fetch-start": "node --experimental-fetch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaronwhipple2022/CSE341.git"
+  },
+  "author": "jaron Whipple",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaronwhipple2022/CSE341/issues"
+  },
+  "homepage": "https://github.com/jaronwhipple2022/CSE341#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "node": "^17.4.0",
+    "node-fetch": "^3.2.0"
+  }
+}
